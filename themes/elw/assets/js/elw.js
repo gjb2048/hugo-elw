@@ -1,1 +1,1 @@
-console.log('{{ .Site.Title | default "Test" }}');
+console.log('{{ .Site.Title }}');

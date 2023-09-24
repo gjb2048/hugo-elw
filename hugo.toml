@@ -1,4 +1,77 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-gb'
 title = 'eLearningWorld Hugo Site'
-theme = 'elw'
+theme = "elw"
+
+[[menus.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 10
+
+[[menus.main]]
+    name = 'Posts'
+    pageRef = '/posts'
+    weight = 20
+
+[[menus.main]]
+    name = 'Tags'
+    pageRef = '/tags'
+    weight = 30
+
+menu = ['main', 'icon']
+
+[[menu.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 10
+    [menu.main.params]
+        icon = "fa-solid fa-house"
+
+[[menu.main]]
+    name = 'Posts'
+    pageRef = '/posts'
+    weight = 20
+    [menu.main.params]
+        icon = "fa-solid fa-newspaper"
+
+[[menu.main]]
+    name = 'Tags'
+    pageRef = '/tags'
+    weight = 30
+    [menu.main.params]
+        icon = "fa-solid fa-newspaper"
+
+[[menu.icon]]
+    url = "https://github.com/gjb2048/"
+    name = "Github"
+    weight = 1
+    [menu.icon.params]
+        icon = "fa-brands fa-github"
+
+[[menu.icon]]
+    url = "https://twitter.com/gjbarnard/"
+    name = "Twitter"
+    weight = 2
+    [menu.icon.params]
+        icon = "fa-brands fa-x-twitter"
+
+[[menu.icon]]
+    url = "https://www.instagram.com/gjbarnard"
+    name = "instagram"
+    weight = 3
+    [menu.icon.params]
+        icon = "fa-brands fa-instagram"
+
+[[menu.icon]]
+    url = "https://www.youtube.com/c/gjbarnardtube"
+    name = "YouTube"
+    weight = 4
+    [menu.icon.params]
+        icon = "fa-brands fa-youtube"
+
+[[menu.icon]]
+    url = "https://www.elearningworld.org/author/gbarnard/"
+    name = "eLearningWorld"
+    weight = 5
+    [menu.icon.params]
+        icon = "fa-solid fa-pen-to-square"
