@@ -1,0 +1,1 @@
+console.log('{{ .Site.Title | default "Test" }}');

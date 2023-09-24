@@ -1,0 +1,30 @@
+<!-- Bootstrap -->
+{{ $bootstrap := resources.Get "bootstrap/bootstrap.min.css" }}
+{{ $bslic := resources.Get "bootstrap/Bootstrap_LICENSE.txt" }}
+{{ $bslic.Publish }}
+
+<!-- font awesome -->
+{{ $brands := resources.Get "fontawesome/css/fa6-brands.css" | resources.ExecuteAsTemplate "style.fa6-brands.css" . }}
+{{ $regular := resources.Get "fontawesome/css/fa6-regular.css" | resources.ExecuteAsTemplate "style.fa6-regular.css" . }}
+{{ $solid := resources.Get "fontawesome/css/fa6-solid.css" | resources.ExecuteAsTemplate "style.fa6-solid.css" . }}
+{{ $fa := resources.Get "fontawesome/css/fontawesome6.min.css" }}
+{{ $falic := resources.Get "fontawesome/Font_Awesome_6_Free_LICENSE.txt" }}
+{{ $falic.Publish }}
+
+<!-- ELW -->
+{{ $foptions := (dict "targetPath" "fonts.css" "outputStyle" "compressed" "enableSourceMap" false) }}
+{{ $elwfont := resources.Get "fonts/fonts.css" | resources.ExecuteAsTemplate "style.fonts.css" . }}
+{{ $flic := resources.Get "fonts/Open_Sans_Apache_License.txt" }}
+{{ $flic.Publish }}
+
+{{ $elwoptions := (dict "targetPath" "elw.css" "outputStyle" "compressed" "enableSourceMap" false) }}
+{{ $elwstyle := resources.Get "sass/elw.scss" | resources.ExecuteAsTemplate "style.elw.scss" . | resources.ToCSS $elwoptions }}
+
+{{ $elw := slice $bootstrap $brands $regular $solid $fa $elwfont $elwstyle | resources.Concat "assets/elw.css" }}
+{{ if eq hugo.Environment "development" }}
+    <link rel="stylesheet" href="{{ $elw.RelPermalink }}">
+{{ else }}
+    {{ with $elw | minify | fingerprint }}
+        <link rel="stylesheet" href="{{ .RelPermalink | absURL }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+    {{ end }}
+{{ end }}

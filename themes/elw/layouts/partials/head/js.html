@@ -1,0 +1,17 @@
+<!-- Bootstrap -->
+{{ $bsjs := resources.Get "bootstrap/bootstrap.min.js" | fingerprint }}
+<script src="{{ $bsjs.Permalink | absURL }}" integrity="{{ $bsjs.Data.Integrity }}"></script>
+
+{{ if eq hugo.Environment "development" }}
+    {{ $opts := dict "targetPath" "assets/elw.js"}}
+    {{ $elwjs := resources.Get "js/elw.js" | resources.ExecuteAsTemplate "elw.js" . | js.Build $opts }}
+    {{ with $elwjs }}
+        <script src="{{ .RelPermalink }}"></script>
+    {{ end }}
+{{ else }}
+    {{ $opts := dict "minify" true "targetPath" "assets/elw.js"}}
+    {{ $elwjs := resources.Get "js/elw.js" | resources.ExecuteAsTemplate "elw.js" . | js.Build $opts }}
+    {{ with $elwjs | fingerprint }}
+        <script src="{{ .RelPermalink | absURL }}" integrity="{{- .Data.Integrity }}" crossorigin="anonymous"></script>
+    {{ end }}
+{{ end }}
