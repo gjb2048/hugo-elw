@@ -1,4 +1,4 @@
-# Theme Name
+# eLearningWorld Hugo Theme
 
 ## Features
 

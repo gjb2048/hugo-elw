@@ -4,23 +4,6 @@ title = 'eLearningWorld Hugo Site'
 theme = "elw"
 enableRobotsTXT = true
 
-[[menus.main]]
-    name = 'Home'
-    pageRef = '/'
-    weight = 10
-
-[[menus.main]]
-    name = 'Posts'
-    pageRef = '/posts'
-    weight = 20
-
-[[menus.main]]
-    name = 'Tags'
-    pageRef = '/tags'
-    weight = 30
-
-menu = ['main', 'icon']
-
 [[menu.main]]
     name = 'Home'
     pageRef = '/'
@@ -40,7 +23,7 @@ menu = ['main', 'icon']
     pageRef = '/tags'
     weight = 30
     [menu.main.params]
-        icon = "fa-solid fa-newspaper"
+        icon = "fa-solid fa-tags"
 
 [[menu.icon]]
     url = "https://github.com/gjb2048/"
