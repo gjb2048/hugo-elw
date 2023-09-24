@@ -7,3 +7,6 @@ draft = false
 # Introduction
 
 Example site
+
+# Image
+![Sheep](sheep.jpg)
