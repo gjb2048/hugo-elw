@@ -6,7 +6,7 @@ draft = false
 
 # Introduction
 
-Example site to demonstrate the use of [Hugo](https://gohugo.io/) for creating static websites.
+Example site
 
 # Image
 ![Sheep](sheep.jpg)

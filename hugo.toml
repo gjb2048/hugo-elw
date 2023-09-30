@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://mysite/'
 languageCode = 'en-gb'
 title = 'eLearningWorld Hugo Site'
 theme = "elw"
@@ -40,22 +40,8 @@ enableRobotsTXT = true
         icon = "fa-brands fa-x-twitter"
 
 [[menu.icon]]
-    url = "https://www.instagram.com/gjbarnard"
-    name = "instagram"
-    weight = 3
-    [menu.icon.params]
-        icon = "fa-brands fa-instagram"
-
-[[menu.icon]]
-    url = "https://www.youtube.com/c/gjbarnardtube"
-    name = "YouTube"
-    weight = 4
-    [menu.icon.params]
-        icon = "fa-brands fa-youtube"
-
-[[menu.icon]]
     url = "https://www.elearningworld.org/author/gbarnard/"
     name = "eLearningWorld"
-    weight = 5
+    weight = 3
     [menu.icon.params]
         icon = "fa-solid fa-pen-to-square"

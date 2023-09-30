@@ -1,13 +1,13 @@
 name = 'eLearningWorld Hugo Theme'
 license = 'MIT'
-licenselink = 'https://github.com/owner/repo/LICENSE'
+licenselink = 'https://github.com/gjb2048/hugo-elw/LICENSE.md'
 description = 'Hugo Theme for eLearningWorld posts'
 
 # The home page of the theme, where the source can be found
-homepage = 'https://github.com/owner/repo'
+homepage = 'https://github.com/gjb2048/hugo-elw'
 
 # If you have a running demo of the theme
-demosite = 'https://owner.github.io/repo'
+#demosite = 'https://owner.github.io/repo'
 
 # Taxonomy terms
 tags = ['eLearningWorld', 'Hugo']

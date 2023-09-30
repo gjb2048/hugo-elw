@@ -22,9 +22,9 @@
 
 {{ $elw := slice $bootstrap $brands $regular $solid $fa $elwfont $elwstyle | resources.Concat "assets/elw.css" }}
 {{ if eq hugo.Environment "development" }}
-    <link rel="stylesheet" href="{{ $elw.RelPermalink }}">
+  <link rel="stylesheet" href="{{ $elw.RelPermalink }}">
 {{ else }}
-    {{ with $elw | minify | fingerprint }}
-        <link rel="stylesheet" href="{{ .RelPermalink | absURL }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-    {{ end }}
+  {{ with $elw | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ .RelPermalink | absURL }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+  {{ end }}
 {{ end }}
