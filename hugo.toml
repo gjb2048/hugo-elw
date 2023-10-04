@@ -1,6 +1,6 @@
-baseURL = 'https://mysite/'
+baseURL = 'http://mysite/'
 languageCode = 'en-gb'
-title = 'eLearningWorld Hugo Site'
+title = 'eLearningWorld Example Hugo Site'
 theme = "elw"
 enableRobotsTXT = true
 
@@ -34,7 +34,7 @@ enableRobotsTXT = true
 
 [[menu.icon]]
     url = "https://twitter.com/gjbarnard/"
-    name = "Twitter"
+    name = "X"
     weight = 2
     [menu.icon.params]
         icon = "fa-brands fa-x-twitter"

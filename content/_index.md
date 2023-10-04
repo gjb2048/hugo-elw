@@ -1,6 +1,6 @@
 +++
-title = 'eLearningWorld Hugo Site'
-date = 2023-09-24T13:32:20+01:00
+title = 'Home'
+date = 2023-10-04T21:29:00+01:00
 draft = false
 +++
 

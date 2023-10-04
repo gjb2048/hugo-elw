@@ -1,7 +1,7 @@
 <nav class="navbar fixed-bottom navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     {{ if .Site.Menus.main }}
-    <ul class="navbar-nav flex-row justify-content-between justify-content-md-center">
+    <ul class="navbar-nav flex-row justify-content-between justify-content-md-start">
       {{ range sort .Site.Menus.main }}
       <li class="nav-item">
         <a class="nav-link" href="{{ .URL }}" title="{{ .Name }}">
@@ -14,7 +14,7 @@
     </ul>
     {{ end }}
     {{ if (.Site.Menus.icon) }}
-    <ul class="navbar-nav flex-row justify-content-center">
+    <ul class="navbar-nav flex-row justify-content-between justify-content-md-end">
       {{ range sort .Site.Menus.icon }}
       <li class="nav-item navbar-icon">
         <a class="nav-link" href="{{ .URL }}" target="_blank">
