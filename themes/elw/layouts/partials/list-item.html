@@ -12,7 +12,7 @@
                 {{ end }}
             </div>
             {{ with .Resources.GetMatch "thumbnail" }}
-            <img class="w-100" src="{{ .Permalink }}">
+            <img class="w-100" src="{{ .Permalink }}" title="{{ .Title }}" alt="{{ .Params.alt }}">
             {{ end }}
         </div>
         <div class="card-footer">
