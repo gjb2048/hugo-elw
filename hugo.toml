@@ -4,6 +4,9 @@ title = 'eLearningWorld Example Hugo Site'
 theme = "elw"
 enableRobotsTXT = true
 
+[taxonomies]
+  tag = 'terms'
+
 [[menu.main]]
     name = 'Home'
     pageRef = '/'
@@ -19,8 +22,8 @@ enableRobotsTXT = true
         icon = "fa-solid fa-newspaper"
 
 [[menu.main]]
-    name = 'Tags'
-    pageRef = '/tags'
+    name = 'Terms'
+    pageRef = '/terms'
     weight = 30
     [menu.main.params]
         icon = "fa-solid fa-tags"

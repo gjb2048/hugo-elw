@@ -1,4 +1,4 @@
-{{ .Date.Format (.Site.Params.dateFormat | default "Monday, 2 January 2006") | $.Scratch.Set "subheader" }}
+{{ .Date.Format (.Site.Params.dateFormat | default "Monday, 2 January 2006") | .Scratch.Set "subheader" }}
 <div class="col mb-3">
     <div class="card h-100">
         <div class="card-body">
@@ -7,16 +7,16 @@
                 {{ with .Description }}
                 <p>{{ . }}</p>
                 {{ end}}
-                {{ with $.Params.summary}}
+                {{ with .Params.summary}}
                 <p class="small">{{ . }}</p>
                 {{ end }}
             </div>
-            {{ with $.Resources.GetMatch "thumbnail" }}
+            {{ with .Resources.GetMatch "thumbnail" }}
             <img class="w-100" src="{{ .Permalink }}">
             {{ end }}
         </div>
         <div class="card-footer">
-            <p>{{ $.Scratch.Get "subheader" }}</p>
+            <p>{{ .Scratch.Get "subheader" }}</p>
             {{ if .Params.tags }}
             <div class="item-tags">
                 {{ partial "tags" . }}
