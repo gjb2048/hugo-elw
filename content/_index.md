@@ -1,12 +1,12 @@
-+++
-title = 'Home'
-date = 2023-10-04
-draft = false
-+++
+---
+title: 'Home'
+date: 2023-10-04
+draft: false
+---
 
 # Introduction
 
 Example site
 
 # Image
-![Sheep](sheep.jpg)
+![A model of a Sheep](images/sheep.jpg "Sheep")
