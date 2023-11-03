@@ -1,0 +1,15 @@
+{{- /*
+Adapted from: https://gohugo.io/content-management/sections/
+*/}}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    {{ range .Ancestors.Reverse }}
+      <li class="breadcrumb-item">
+        <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+      </li>
+    {{ end }}
+    <li class="breadcrumb-item active">
+      <a aria-current="page" href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+    </li>
+  </ol>
+</nav>
