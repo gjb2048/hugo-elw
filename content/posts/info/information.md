@@ -7,11 +7,9 @@ tags: ['hugo', 'information']
 draft: false
 ---
 
-# Content and theme
+# Posts
 
-The content and theme compliment my associated post on [eLearningWorld - Static](https://www.elearningworld.org/static/).
-
-# Images
-
-The second post is about images, please see [eLearningWorld - Static images](https://www.elearningworld.org/static/).
-
+1. Content and theme
+    - The content and theme compliment my associated post on [eLearningWorld - Static](https://www.elearningworld.org/static/).
+2. Images
+    - The second post is about images, please see [eLearningWorld - Static images](https://www.elearningworld.org/static-images/).
