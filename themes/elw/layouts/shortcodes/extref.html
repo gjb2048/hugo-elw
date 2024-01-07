@@ -1,0 +1,20 @@
+{{- /*
+References:
+    https://gohugo.io/content-management/shortcodes/
+    https://gohugo.io/templates/shortcode-templates/
+    https://gohugo.io/methods/shortcode/inner/
+    https://gohugo.io/methods/shortcode/innerdeindent/
+*/}}
+{{ if .IsNamedParams }}
+    {{ if strings.ContainsNonSpace .Inner }}
+        <a href="{{ .Get "href" }}" target="_blank" title="{{ .Get "title" }}">{{ trim .InnerDeindent "\r\n" }}</a>
+    {{ else }}
+        <a href="{{ .Get "href" }}" target="_blank">{{ .Get "title" }}</a>
+    {{ end }}
+{{ else }}
+    {{ if strings.ContainsNonSpace .Inner }}
+        <a href="{{ .Get 1 }}" target="_blank" title="{{ .Get 0 }}">{{ trim .InnerDeindent "\r\n" }}</a>
+    {{ else }}
+        <a href="{{ .Get 1 }}" target="_blank">{{ .Get 0 }}</a>
+    {{ end }}
+{{ end }}
