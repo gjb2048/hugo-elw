@@ -12,6 +12,6 @@
   {{ $opts := dict "minify" true "targetPath" "assets/elw.js"}}
   {{ $elwjs := resources.Get "js/elw.js" | resources.ExecuteAsTemplate "elw.js" . | js.Build $opts }}
   {{ with $elwjs | fingerprint }}
-    <script src="{{ .RelPermalink | absURL }}" integrity="{{- .Data.Integrity }}" crossorigin="anonymous"></script>
+    <script src="{{ .RelPermalink | absURL }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
   {{ end }}
 {{ end }}

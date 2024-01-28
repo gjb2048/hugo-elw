@@ -25,6 +25,6 @@
     <link rel="stylesheet" href="{{ $elw.RelPermalink }}">
 {{ else }}
   {{ with $elw | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ .RelPermalink | absURL }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ .RelPermalink | absURL }}" crossorigin="anonymous">
   {{ end }}
 {{ end }}
