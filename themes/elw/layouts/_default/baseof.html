@@ -5,15 +5,17 @@
   </head>
   <body>
     {{ partial "navbar" . }}
-    <header>
-      {{ partial "header.html" . }}
-    </header>
-    <main>
-      {{ block "main" . }}{{ end }}
-    </main>
-    <footer>
-      {{ partial "footer.html" . }}
-    </footer>
+    <div class="container">
+      <header>
+        {{ partial "header.html" . }}
+      </header>
+      <main>
+        {{ block "main" . }}{{ end }}
+      </main>
+      <footer>
+        {{ partial "footer.html" . }}
+      </footer>
+    </div>
     {{ partial "foot.html" . }}
-  </body>
+    </body>
 </html>

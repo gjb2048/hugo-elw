@@ -25,6 +25,13 @@ enableRobotsTXT = true
     [menu.main.params]
         icon = "fa-solid fa-tags"
 
+[[menu.main]]
+    name = 'About'
+    pageRef = '/about'
+    weight = 40
+    [menu.main.params]
+        icon = "fa-solid fa-circle-info"
+
 [[menu.icon]]
     url = "https://github.com/gjb2048/"
     name = "Github"

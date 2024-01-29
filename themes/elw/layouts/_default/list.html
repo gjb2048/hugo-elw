@@ -1,13 +1,13 @@
 {{ define "main" }}
-  <main class="text-center text-md-start">
-    <div class="row">
-        <h1 class="col-12">{{ .Title }}</h1>
-        <div class="col-12">{{ .Content }}</div>
-    </div>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-    {{ range .Pages }}
-        {{ partial "list-item" . }}
-    {{ end }}
-    </div>
-</main>
+<div class="text-center text-md-start">
+  <div class="row">
+    <h1 class="col-12">{{ .Title }}</h1>
+    <div class="col-12">{{ .Content }}</div>
+  </div>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+  {{ range .Pages }}
+    {{ partial "list-item" . }}
+  {{ end }}
+  </div>
+</div>
 {{ end }}
