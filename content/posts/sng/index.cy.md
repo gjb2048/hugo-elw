@@ -9,7 +9,7 @@ resources:
   src: "images/760D_7762-sng_sm.jpg"
   params:
     alt: "60007 Syr Nigel Gresley yn Powderham, Dyfnaint"
-tags: ['Train', 'Steam engine', '60007']
+tags: ['Tren', 'Injan stêm', '60007']
 draft: false
 ---
 
