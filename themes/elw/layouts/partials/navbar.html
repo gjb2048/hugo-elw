@@ -4,27 +4,37 @@
     <ul class="navbar-nav flex-row justify-content-between justify-content-md-center">
       {{ range sort .Site.Menus.main }}
       <li class="nav-item">
-        <a class="nav-link" href="{{ .URL }}" title="{{ .Name }}">
+        <a class="nav-link" href="{{ .URL | absLangURL }}" title="{{ or (i18n .Identifier) .Name }}">
           <span class="{{ .Params.icon }} icon" aria-hidden="true"></span>
-          <span class="d-none d-md-inline" aria-hidden="true">{{ .Name }}</span>
-          <span class="sr-only">{{ .Name }}</span>
+          <span class="d-none d-md-inline" aria-hidden="true">{{ or (i18n .Identifier) .Name }}</span>
+          <span class="sr-only">{{ or (i18n .Identifier) .Name }}</span>
         </a>
       </li>
       {{ end }}
     </ul>
     {{ end }}
-    {{ if (.Site.Menus.icon) }}
+    {{ if or ($.Site.Home.AllTranslations) (.Site.Menus.icon) }}
     <ul class="navbar-nav flex-row justify-content-between justify-content-md-center">
+      {{ range $.Site.Home.AllTranslations }}
+      <li>
+        <a class="nav-link" href="{{ .Permalink }}">
+          <span class="icon" title="{{ .Language.LanguageName }}" aria-hidden="true">
+             <img src="{{ print .Language.Lang "_nation_icon.png" | absURL }}">
+          </span>
+          <span class="sr-only">{{ .Language.LanguageName }}</span>
+        </a>
+      </li>
+      {{ end }}
       {{ range sort .Site.Menus.icon }}
       <li class="nav-item navbar-icon">
-        <a class="nav-link" href="{{ .URL }}" target="_blank">
-          <span class="{{ .Params.icon }} fa-lg icon" title="{{ .Name }}" aria-hidden="true"></span>
-          <span class="sr-only">{{ .Name }}</span>
+        <a class="nav-link" href="{{ .URL | absLangURL }}" target="_blank">
+          <span class="{{ .Params.icon }} fa-lg icon" title="{{ or (i18n .Identifier) .Name }}" aria-hidden="true"></span>
+          <span class="sr-only">{{ or (i18n .Identifier) .Name }}</span>
         </a>
       </li>
       {{ end }}
       {{ with .OutputFormats.Get "RSS" }}
-      {{ $title := delimit (slice $.Site.Title $.Page.Title "RSS Feed") " "}}
+      {{ $title := delimit (slice $.Site.Title $.Page.Title (i18n "rssfeed")) " "}}
       <li class="nav-item navbar-icon">
         <a href="{{ .RelPermalink }}" class="nav-link" rel="feed" type="{{ .MediaType.Type }}" title="{{ $title }}" target="_blank">
           <span class="fa-solid fa-square-rss fa-lg icon" title="{{ $title }}" aria-hidden="true"></span>

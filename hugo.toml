@@ -1,52 +1,63 @@
 baseURL = 'http://localhost/'
-languageCode = 'en-gb'
+defaultContentLanguage = 'en-gb'
 theme = "elw"
 enableRobotsTXT = true
 
-# https://gohugo.io/hugo-modules/configuration/
-# https://discourse.gohugo.io/t/how-to-show-images-from-the-static-folder/41402/5
-#[[module.mounts]]
-#    source = 'static'
-#    target = 'assets'
+# Ref: https://gohugo.io/content-management/multilingual/
+[languages]
+    [languages.en-gb]
+        disabled = false
+        languageCode = 'en-gb'
+        languageDirection = 'ltr'
+        languageName = 'English'
+        title = 'eLearningWorld Example Hugo Site'
+        weight = 1
+    [languages.cy]
+        disabled = false
+        languageCode = 'cy'
+        languageDirection = 'ltr'
+        languageName = 'Cymraeg'
+        title = 'Enghraifft eDdysguByd Safle Hugo'
+        weight = 2
 
 [[menu.main]]
-    name = 'Home'
+    identifier = 'home'
     pageRef = '/'
     weight = 10
     [menu.main.params]
         icon = "fa-solid fa-house"
 
 [[menu.main]]
-    name = 'Posts'
+    identifier = 'posts'
     pageRef = '/posts'
     weight = 20
     [menu.main.params]
         icon = "fa-solid fa-newspaper"
 
 [[menu.main]]
-    name = 'Terms'
+    identifier = 'terms'
     pageRef = '/tags'
     weight = 30
     [menu.main.params]
         icon = "fa-solid fa-tags"
 
 [[menu.main]]
-    name = 'About'
+    identifier = 'about'
     pageRef = '/about'
     weight = 40
     [menu.main.params]
         icon = "fa-solid fa-circle-info"
 
 [[menu.icon]]
-    url = "https://github.com/gjb2048/"
-    name = "Github"
+    url = "https://www.elearningworld.org/author/gbarnard/"
+    identifier = 'elearningworld'
     weight = 1
     [menu.icon.params]
-        icon = "fa-brands fa-github"
+        icon = "fa-solid fa-globe"
 
 [[menu.icon]]
-    url = "https://www.elearningworld.org/author/gbarnard/"
-    name = "eLearningWorld"
+    url = "https://github.com/gjb2048/"
+    name = "GitHub"
     weight = 2
     [menu.icon.params]
-        icon = "fa-solid fa-pen-to-square"
+        icon = "fa-brands fa-github"
