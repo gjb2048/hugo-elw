@@ -1,5 +1,5 @@
 baseURL = 'http://localhost/'
-languageCode = 'en-gb'
+defaultContentLanguage = 'en-gb'
 theme = "elw"
 enableRobotsTXT = true
 
@@ -9,7 +9,24 @@ enableRobotsTXT = true
 #    source = 'static'
 #    target = 'assets'
 
+[languages]
+    [languages.en]
+        disabled = false
+        languageCode = 'en-gb'
+        languageDirection = 'ltr'
+        languageName = 'English'
+        title = 'eLearningWorld Example Hugo Site'
+        weight = 1
+    [languages.cy]
+        disabled = false
+        languageCode = 'cy'
+        languageDirection = 'ltr'
+        languageName = 'Cymraeg'
+        title = 'Enghraifft eDdysguByd Safle Hugo'
+        weight = 2
+
 [[menu.main]]
+    identifier = 'home'
     name = 'Home'
     pageRef = '/'
     weight = 10
@@ -17,6 +34,7 @@ enableRobotsTXT = true
         icon = "fa-solid fa-house"
 
 [[menu.main]]
+    identifier = 'posts'
     name = 'Posts'
     pageRef = '/posts'
     weight = 20
@@ -24,6 +42,7 @@ enableRobotsTXT = true
         icon = "fa-solid fa-newspaper"
 
 [[menu.main]]
+    identifier = 'terms'
     name = 'Terms'
     pageRef = '/tags'
     weight = 30
@@ -31,6 +50,7 @@ enableRobotsTXT = true
         icon = "fa-solid fa-tags"
 
 [[menu.main]]
+    identifier = 'about'
     name = 'About'
     pageRef = '/about'
     weight = 40
@@ -46,6 +66,7 @@ enableRobotsTXT = true
 
 [[menu.icon]]
     url = "https://www.elearningworld.org/author/gbarnard/"
+    identifier = 'elearningworld'
     name = "eLearningWorld"
     weight = 2
     [menu.icon.params]
