@@ -10,7 +10,7 @@ enableRobotsTXT = true
 #    target = 'assets'
 
 [languages]
-    [languages.en]
+    [languages.en-gb]
         disabled = false
         languageCode = 'en-gb'
         languageDirection = 'ltr'
