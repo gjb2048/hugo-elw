@@ -1,10 +1,10 @@
 baseURL = 'http://mysite/'
-defaultContentLanguage = 'en'
+defaultContentLanguage = 'en-gb'
 theme = "elw"
 enableRobotsTXT = true
 
 [languages]
-    [languages.en]
+    [languages.en-gb]
         disabled = false
         languageCode = 'en-gb'
         languageDirection = 'ltr'
