@@ -17,4 +17,4 @@ Safle enghreifftiol ar gyfer eDdysguByd.
     - {{< extref title="eDdysguByd" href="https://www.elearningworld.org" >}}Dyma Fyd eDdysgu{{< /extref >}}
 
 # Delwedd
-![Model o Ddafad](images/sheep.jpg "Defaid")
+![Model o Ddafad](/images/sheep.jpg "Defaid")
