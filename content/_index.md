@@ -17,4 +17,4 @@ Example site for eLearningWorld.
     - {{< extref title="eLearningWorld" href="https://www.elearningworld.org" >}}This is eLearningWorld{{< /extref >}}
 
 # Image
-![A model of a Sheep](images/sheep.jpg "Sheep")
+![A model of a Sheep](/images/sheep.jpg "Sheep")
