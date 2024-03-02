@@ -1,4 +1,4 @@
-baseURL = 'http://mysite/'
+baseURL = 'http://localhost/elw/'
 defaultContentLanguage = 'en-gb'
 theme = "elw"
 enableRobotsTXT = true
