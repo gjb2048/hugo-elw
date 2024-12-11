@@ -1,5 +1,5 @@
 {{ range .Params.tags }}
-<a href="{{ $.Site.BaseURL }}{{ relLangURL "" }}/tags/{{ . | urlize }}">
+<a href="{{ absLangURL "" }}tags/{{ . | urlize }}">
     <kbd class="item-tag">{{ . }}</kbd>
 </a>
 {{ end }}
