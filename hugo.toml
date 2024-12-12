@@ -45,7 +45,7 @@ enableRobotsTXT = true
         icon = "fa-brands fa-github"
 
 [[menu.icon]]
-    url = "https://twitter.com/gjbarnard/"
+    url = "https://x.com/gjbarnard/"
     name = "X"
     weight = 2
     [menu.icon.params]
