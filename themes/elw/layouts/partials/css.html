@@ -18,7 +18,7 @@
 {{ $flic.Publish }}
 
 {{ $elwoptions := (dict "targetPath" "elw.css" "outputStyle" "compressed" "enableSourceMap" false) }}
-{{ $elwstyle := resources.Get "sass/elw.scss" | resources.ExecuteAsTemplate "style.elw.scss" . | resources.ToCSS $elwoptions }}
+{{ $elwstyle := resources.Get "sass/elw.scss" | resources.ExecuteAsTemplate "style.elw.scss" . | css.Sass $elwoptions }}
 
 {{ $elw := slice $bootstrap $brands $regular $solid $fa $elwfont $elwstyle | resources.Concat "assets/elw.css" }}
 {{ if eq hugo.Environment "development" }}
