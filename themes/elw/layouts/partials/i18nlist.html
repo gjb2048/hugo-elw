@@ -1,0 +1,15 @@
+{{ if .IsTranslated }}
+<h4>{{ i18n "translations" }}</h4>
+<ul class="navbar-nav flex-row">
+  {{ range .Translations }}
+  <li>
+    <a href="{{ .RelPermalink }}">
+        <span class="icon" title="{{ .Language.LanguageName }}" aria-hidden="true">
+            <img src="{{ print .Language.Lang "_nation_icon.png" | absURL }}">
+        </span>
+        {{ .LinkTitle }}
+    </a>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
