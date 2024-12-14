@@ -4,7 +4,7 @@
     <ul class="navbar-nav flex-row justify-content-between justify-content-md-center">
       {{ range sort .Site.Menus.main }}
       <li class="nav-item">
-        <a class="nav-link" href="{{ with .Page }}{{ .Path | strings.TrimLeft "/" | absLangURL }}{{ else }}{{ .URL }}{{ end }}" title="{{ or (i18n .Identifier) .Name }}">
+        <a class="nav-link" href="{{ .URL | absLangURL }}" title="{{ or (i18n .Identifier) .Name }}">
           <span class="{{ .Params.icon }} icon" aria-hidden="true"></span>
           <span class="d-none d-md-inline" aria-hidden="true">{{ or (i18n .Identifier) .Name }}</span>
           <span class="sr-only">{{ or (i18n .Identifier) .Name }}</span>
@@ -27,7 +27,7 @@
       {{ end }}
       {{ range sort .Site.Menus.icon }}
       <li class="nav-item navbar-icon">
-        <a class="nav-link" href="{{ with .Page }}{{ .Path | strings.TrimLeft "/" | absLangURL }}{{ else }}{{ .URL }}{{ end }}" target="_blank">
+        <a class="nav-link" href="{{ .URL | absLangURL }}" target="_blank">
           <span class="{{ .Params.icon }} fa-lg icon" title="{{ or (i18n .Identifier) .Name }}" aria-hidden="true"></span>
           <span class="sr-only">{{ or (i18n .Identifier) .Name }}</span>
         </a>
