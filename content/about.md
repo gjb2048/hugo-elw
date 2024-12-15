@@ -2,7 +2,6 @@
 title: About
 description: About the site
 date: 2024-01-29
-tags: ["about"]
 ---
 
 ## Licences
