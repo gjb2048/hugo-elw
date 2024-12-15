@@ -1,4 +1,4 @@
-{{ dateFormat "Monday, 2 January 2006" .Date | .Scratch.Set "subheader" }}
+{{ .Date | time.Format ":date_full" | .Scratch.Set "subheader" }}
 <div class="col mb-3">
     <div class="card h-100">
         <div class="card-body">
