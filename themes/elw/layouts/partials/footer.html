@@ -1,2 +1,2 @@
-<p>{{ i18n "generated" }}: {{ time.Format "Monday, 2 January 2006, 15:04:05 MST" now }}</p>
+<p>{{ i18n "generated" }}: {{ time.Format ":date_full" now }}, {{ time.Format ":time_full" now }}</p>
 {{ partial "i18nlist.html" . }}
