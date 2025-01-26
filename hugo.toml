@@ -45,15 +45,8 @@ enableRobotsTXT = true
         icon = "fa-brands fa-github"
 
 [[menu.icon]]
-    url = "https://x.com/gjbarnard/"
-    name = "X"
-    weight = 2
-    [menu.icon.params]
-        icon = "fa-brands fa-x-twitter"
-
-[[menu.icon]]
     url = "https://www.elearningworld.org/author/gbarnard/"
     name = "eLearningWorld"
-    weight = 3
+    weight = 2
     [menu.icon.params]
         icon = "fa-solid fa-pen-to-square"
